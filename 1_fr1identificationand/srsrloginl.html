@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>SR1.1-SR1.13 (Logs)</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="123" height="50" /></div>
+        <div><p>CRA developer document</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../index.html">Developer docu CRA</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../0_general/index.html"> General</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../0_general/understand.html">Understanding of the Metamation products</a></li>
+        <li><button class="tree blank"></button><a href="../0_general/sr.html">Security Requriemtnents (SR)</a></li>
+        <li><button class="tree blank"></button><a href="../0_general/existingfu.html">Existing functionality in Praxis</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree open"></button>
+      <a href="index.html"> FR 1 – Identification and authentication control </a>
+      <ul>
+        <li><button class="tree blank"></button><a href="srsrpasswo.html">SR 1.5 – Authenticator Management (Passwords)</a></li>
+        <li><button class="tree blank"></button><a href="srsrpublic.html">SR1.8-SR1.10 (Public key certificates / digital certificates)</a></li>
+        <li><button class="tree blank"></button><a class="active" href="srsrloginl.html">SR1.1-SR1.13 (Logs)</a></li>
+        <li><button class="tree blank"></button><a href="proposedex.html">SR1 Proposed extended security measures in Praxis</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../2_fr2usecontrol/index.html"> FR 2 – Use control</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../2_fr2usecontrol/srauthoriz.html">SR 2.1 – Authorization enforcement</a></li>
+        <li><button class="tree blank"></button><a href="../2_fr2usecontrol/srwireless.html">SR 2.2 – 2.3 – Wireless use control – NA</a></li>
+        <li><button class="tree blank"></button><a href="../2_fr2usecontrol/srmobileco.html">SR 2.4 – Mobile code - NA</a></li>
+        <li><button class="tree blank"></button><a href="../2_fr2usecontrol/srsessionl.html">SR 2.5-2.6 – Session lock, concurrent sessions</a></li>
+        <li><button class="tree blank"></button><a href="../2_fr2usecontrol/srauditabl.html">SR 2.8 – 2.12– Auditable events + time stamps</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../3_fr3systemintegrity/index.html"> FR 3 – System integrity</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srcommunic.html">SR 3.1 – Communication Integrity</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srmaliciou.html">SR 3.2 – Malicious code protection</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srsecurity.html">SR 3.3 – Security functionality verification</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srsoftware.html">SR 3.4 – Software and information integrity</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srerrorhan.html">SR 3.7 – Error handling</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srprotecti.html">SR 3.9 – Protection of audit information</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srreauditr.html">SR 3.9 RE 1 – Audit records on write-once media</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../4_fr4dataconfidentiali/index.html"> FR 4 – Data confidentiality</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../4_fr4dataconfidentiali/srinformat.html">SR 4.2 – Information persistence</a></li>
+        <li><button class="tree blank"></button><a href="../4_fr4dataconfidentiali/srinformat.html">SR 4.2 – Information persistence</a></li>
+        <li><button class="tree blank"></button><a href="../4_fr4dataconfidentiali/sruseofcry.html">SR 4.3 – Use of cryptography</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../5_fr5restricteddataflo/index.html"> FR 5 – Restricted data flow</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../5_fr5restricteddataflo/srnetworks.html">SR 5.1 – Network segmentation</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../6_fr6timelyresponsetoe/index.html"> FR 6 – Timely response to events</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../6_fr6timelyresponsetoe/srauditlog.html">SR 6.1 – Audit log accessibility</a></li>
+        <li><button class="tree blank"></button><a href="../6_fr6timelyresponsetoe/srcontinuo.html">SR 6.2 – Continuous monitoring</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../7_fr7resourceavailabil/index.html"> FR 7 – Resource availability / Control System Backup</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../7_fr7resourceavailabil/srcontrols.html">SR 7.3 – Control system backup</a></li>
+        <li><button class="tree blank"></button><a href="../7_fr7resourceavailabil/srnetworka.html">SR 7.6 – Network and security configuration settings</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="index.html"> FR 1 – Identification and authentication control </a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="srsrloginl.html">SR1.1-SR1.13 (Logs)</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>SR1.1-SR1.13 (Logs)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Logging and monitoring of events within the industrial control system environment ensures the confidentiality, integrity, and availability of critical infrastructure. It applies to all ICS environments, including all hardware, software, networks, and personnel involved in the operation and maintenance of these systems.</p>
+</div>
+<div class="paragraph">
+<p><strong>Log Generation</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All critical systems and components must generate logs for security-relevant events, including but not limited to:</p>
+</li>
+<li>
+<p>Authentication attempts (successful and unsuccessful)</p>
+</li>
+<li>
+<p>Access to critical assets</p>
+</li>
+<li>
+<p>Changes to system configurations</p>
+</li>
+<li>
+<p>Privilege escalations</p>
+</li>
+<li>
+<p>System startups and shutdowns</p>
+</li>
+<li>
+<p>Security policy changes</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Log Contents</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Logs must contain sufficient detail to identify the following:</p>
+</li>
+<li>
+<p>Date and time of the event</p>
+</li>
+<li>
+<p>Source and destination IP addresses</p>
+</li>
+<li>
+<p>User ID or system process triggering the event</p>
+</li>
+<li>
+<p>Description of the event or activity</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Timestamp Synchronization</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All logging devices must be synchronized to a reliable time source using Network Time Protocol (NTP) to ensure the accuracy and consistency of timestamps.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Log Storage</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Logs must be stored in a secure manner to prevent unauthorized access, modification, or deletion.</p>
+</li>
+<li>
+<p>Logs should be retained for a minimum period as determined by regulatory requirements or business needs, typically not less than one year.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Log Access</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Access to logs must be restricted to authorized personnel only. Role-based access controls (RBAC) should be implemented to enforce this restriction.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_current_realization_target_state_and_measures">Current realization, target state and measures</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_item">Item:*</h3>
+<div class="paragraph">
+<p><strong>FogbugZ case</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Current realization</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Target State</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Open Questions / Items</strong></p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_current_realization_target_state_and_measures">Current realization, target state and measures</a>
+    </li>
+    <li level="2">
+      <a href="#_item">Item:*</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="srsrpublic.html">SR1.8-SR1.10 (Public key certificates / digital certificates)</a></span>
+  <span class="next"><a href="proposedex.html">SR1 Proposed extended security measures in Praxis</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

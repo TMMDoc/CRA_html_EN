@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Security Requriemtnents (SR)</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="123" height="50" /></div>
+        <div><p>CRA developer document</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../index.html">Developer docu CRA</a></li>
+    <li>
+      <button class="tree open"></button>
+      <a href="index.html"> General</a>
+      <ul>
+        <li><button class="tree blank"></button><a href="understand.html">Understanding of the Metamation products</a></li>
+        <li><button class="tree blank"></button><a class="active" href="sr.html">Security Requriemtnents (SR)</a></li>
+        <li><button class="tree blank"></button><a href="existingfu.html">Existing functionality in Praxis</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../1_fr1identificationand/index.html"> FR 1 – Identification and authentication control </a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../1_fr1identificationand/srsrpasswo.html">SR 1.5 – Authenticator Management (Passwords)</a></li>
+        <li><button class="tree blank"></button><a href="../1_fr1identificationand/srsrpublic.html">SR1.8-SR1.10 (Public key certificates / digital certificates)</a></li>
+        <li><button class="tree blank"></button><a href="../1_fr1identificationand/srsrloginl.html">SR1.1-SR1.13 (Logs)</a></li>
+        <li><button class="tree blank"></button><a href="../1_fr1identificationand/proposedex.html">SR1 Proposed extended security measures in Praxis</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../2_fr2usecontrol/index.html"> FR 2 – Use control</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../2_fr2usecontrol/srauthoriz.html">SR 2.1 – Authorization enforcement</a></li>
+        <li><button class="tree blank"></button><a href="../2_fr2usecontrol/srwireless.html">SR 2.2 – 2.3 – Wireless use control – NA</a></li>
+        <li><button class="tree blank"></button><a href="../2_fr2usecontrol/srmobileco.html">SR 2.4 – Mobile code - NA</a></li>
+        <li><button class="tree blank"></button><a href="../2_fr2usecontrol/srsessionl.html">SR 2.5-2.6 – Session lock, concurrent sessions</a></li>
+        <li><button class="tree blank"></button><a href="../2_fr2usecontrol/srauditabl.html">SR 2.8 – 2.12– Auditable events + time stamps</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../3_fr3systemintegrity/index.html"> FR 3 – System integrity</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srcommunic.html">SR 3.1 – Communication Integrity</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srmaliciou.html">SR 3.2 – Malicious code protection</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srsecurity.html">SR 3.3 – Security functionality verification</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srsoftware.html">SR 3.4 – Software and information integrity</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srerrorhan.html">SR 3.7 – Error handling</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srprotecti.html">SR 3.9 – Protection of audit information</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srreauditr.html">SR 3.9 RE 1 – Audit records on write-once media</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../4_fr4dataconfidentiali/index.html"> FR 4 – Data confidentiality</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../4_fr4dataconfidentiali/srinformat.html">SR 4.2 – Information persistence</a></li>
+        <li><button class="tree blank"></button><a href="../4_fr4dataconfidentiali/srinformat.html">SR 4.2 – Information persistence</a></li>
+        <li><button class="tree blank"></button><a href="../4_fr4dataconfidentiali/sruseofcry.html">SR 4.3 – Use of cryptography</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../5_fr5restricteddataflo/index.html"> FR 5 – Restricted data flow</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../5_fr5restricteddataflo/srnetworks.html">SR 5.1 – Network segmentation</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../6_fr6timelyresponsetoe/index.html"> FR 6 – Timely response to events</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../6_fr6timelyresponsetoe/srauditlog.html">SR 6.1 – Audit log accessibility</a></li>
+        <li><button class="tree blank"></button><a href="../6_fr6timelyresponsetoe/srcontinuo.html">SR 6.2 – Continuous monitoring</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../7_fr7resourceavailabil/index.html"> FR 7 – Resource availability / Control System Backup</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../7_fr7resourceavailabil/srcontrols.html">SR 7.3 – Control system backup</a></li>
+        <li><button class="tree blank"></button><a href="../7_fr7resourceavailabil/srnetworka.html">SR 7.6 – Network and security configuration settings</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="index.html"> General</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="sr.html">Security Requriemtnents (SR)</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Security Requriemtnents (SR)</h1>
+<div class="paragraph">
+<p>In <strong>IEC 62443-3-3</strong>, "SR" stands for <strong>Security Requirement</strong>. These are fundamental security capabilities that an <strong>Industrial Automation and Control System (IACS)</strong> must implement to protect against cyber threats.</p>
+</div>
+<div class="paragraph">
+<p><strong>Understanding SR in IEC 62443-3-3</strong>
+IEC 62443-3-3 is part of the <strong>IEC 62443 series</strong>, which provides a framework for securing industrial control systems. Specifically, this part focuses on <strong>system security requirements and security levels</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>SRs (Security Requirements)</strong> are divided into <strong>seven foundational requirements (FRs)</strong>, which categorize them based on security objectives.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>The Seven Foundational Requirements (FRs) &amp; Their Security Requirements (SRs)</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>FR 1 – Identification and Authentication Control (IAC)</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>SR 1.1</strong>: Human user identification and authentication</p>
+</li>
+<li>
+<p><strong>SR 1.2</strong>: Software process and device authentication</p>
+</li>
+<li>
+<p><strong>SR 1.3</strong>: Account management</p>
+</li>
+<li>
+<p><strong>SR 1.4</strong>: Identifier management</p>
+</li>
+<li>
+<p><strong>SR 1.5</strong>: Authenticator management</p>
+</li>
+<li>
+<p><strong>SR 1.6</strong>: Wireless access management</p>
+</li>
+<li>
+<p><strong>SR 1.7</strong>: Strength of authentication</p>
+</li>
+<li>
+<p><strong>SR 1.8</strong>: Public key infrastructure (PKI) certificates</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>FR 2 – Use Control (UC)</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>SR 2.1</strong>: Authorization enforcement</p>
+</li>
+<li>
+<p><strong>SR 2.2</strong>: Wireless use control</p>
+</li>
+<li>
+<p><strong>SR 2.3</strong>: Account use enforcement</p>
+</li>
+<li>
+<p><strong>SR 2.4</strong>: Access enforcement</p>
+</li>
+<li>
+<p><strong>SR 2.5</strong>: Session lock</p>
+</li>
+<li>
+<p><strong>SR 2.6</strong>: Remote session termination</p>
+</li>
+<li>
+<p><strong>SR 2.7</strong>: Concurrent session control</p>
+</li>
+<li>
+<p><strong>SR 2.8</strong>: Privilege management</p>
+</li>
+<li>
+<p><strong>SR 2.9</strong>: Control system access to external systems</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>FR 3 – System Integrity (SI)</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>SR 3.1</strong>: Communication integrity</p>
+</li>
+<li>
+<p><strong>SR 3.2</strong>: Malicious code protection</p>
+</li>
+<li>
+<p><strong>SR 3.3</strong>: Security functionality verification</p>
+</li>
+<li>
+<p><strong>SR 3.4</strong>: Software, firmware, and information integrity</p>
+</li>
+<li>
+<p><strong>SR 3.5</strong>: Input validation</p>
+</li>
+<li>
+<p><strong>SR 3.6</strong>: Deterministic output</p>
+</li>
+<li>
+<p><strong>SR 3.7</strong>: Error handling</p>
+</li>
+<li>
+<p><strong>SR 3.8</strong>: Session integrity</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>FR 4 – Data Confidentiality (DC)</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>SR 4.1</strong>: Information confidentiality</p>
+</li>
+<li>
+<p><strong>SR 4.2</strong>: Use of cryptography</p>
+</li>
+<li>
+<p><strong>SR 4.3</strong>: Key management</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>FR 5 – Restricted Data Flow (RDF)</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>SR 5.1</strong>: Network segmentation</p>
+</li>
+<li>
+<p><strong>SR 5.2</strong>: Security-enforcing communication boundary</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>FR 6 – Timely Response to Events (TRE)</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>SR 6.1</strong>: Audit log generation</p>
+</li>
+<li>
+<p><strong>SR 6.2</strong>: Continuous monitoring</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>FR 7 – Resource Availability (RA)</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>SR 7.1</strong>: Denial-of-service protection</p>
+</li>
+<li>
+<p><strong>SR 7.2</strong>: Resource management</p>
+</li>
+<li>
+<p><strong>SR 7.3</strong>: Control system backup</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Security Levels (SL) and Enhancements (RE)</strong>
+Each SR can have <strong>Security Level (SL) ratings</strong> (SL 1 to SL 4) that define increasing levels of protection against different adversary capabilities.
+Additionally, some SRs have <strong>Requirement Enhancements (REs)</strong> that strengthen security beyond the basic requirement.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Security Requirements (SRs)</strong> in <strong>IEC 62443-3-3</strong> are critical for defining cybersecurity measures in industrial control systems. They provide a structured approach to securing <strong>networks, devices, users, and processes</strong>, helping organizations implement <strong>robust cybersecurity</strong> based on their <strong>security level needs</strong>.</p>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="understand.html">Understanding of the Metamation products</a></span>
+  <span class="next"><a href="existingfu.html">Existing functionality in Praxis</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

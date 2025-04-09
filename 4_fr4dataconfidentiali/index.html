@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title> FR 4 – Data confidentiality</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="123" height="50" /></div>
+        <div><p>CRA developer document</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../index.html">Developer docu CRA</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../0_general/index.html"> General</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../0_general/understand.html">Understanding of the Metamation products</a></li>
+        <li><button class="tree blank"></button><a href="../0_general/sr.html">Security Requriemtnents (SR)</a></li>
+        <li><button class="tree blank"></button><a href="../0_general/existingfu.html">Existing functionality in Praxis</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../1_fr1identificationand/index.html"> FR 1 – Identification and authentication control </a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../1_fr1identificationand/srsrpasswo.html">SR 1.5 – Authenticator Management (Passwords)</a></li>
+        <li><button class="tree blank"></button><a href="../1_fr1identificationand/srsrpublic.html">SR1.8-SR1.10 (Public key certificates / digital certificates)</a></li>
+        <li><button class="tree blank"></button><a href="../1_fr1identificationand/srsrloginl.html">SR1.1-SR1.13 (Logs)</a></li>
+        <li><button class="tree blank"></button><a href="../1_fr1identificationand/proposedex.html">SR1 Proposed extended security measures in Praxis</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../2_fr2usecontrol/index.html"> FR 2 – Use control</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../2_fr2usecontrol/srauthoriz.html">SR 2.1 – Authorization enforcement</a></li>
+        <li><button class="tree blank"></button><a href="../2_fr2usecontrol/srwireless.html">SR 2.2 – 2.3 – Wireless use control – NA</a></li>
+        <li><button class="tree blank"></button><a href="../2_fr2usecontrol/srmobileco.html">SR 2.4 – Mobile code - NA</a></li>
+        <li><button class="tree blank"></button><a href="../2_fr2usecontrol/srsessionl.html">SR 2.5-2.6 – Session lock, concurrent sessions</a></li>
+        <li><button class="tree blank"></button><a href="../2_fr2usecontrol/srauditabl.html">SR 2.8 – 2.12– Auditable events + time stamps</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../3_fr3systemintegrity/index.html"> FR 3 – System integrity</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srcommunic.html">SR 3.1 – Communication Integrity</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srmaliciou.html">SR 3.2 – Malicious code protection</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srsecurity.html">SR 3.3 – Security functionality verification</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srsoftware.html">SR 3.4 – Software and information integrity</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srerrorhan.html">SR 3.7 – Error handling</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srprotecti.html">SR 3.9 – Protection of audit information</a></li>
+        <li><button class="tree blank"></button><a href="../3_fr3systemintegrity/srreauditr.html">SR 3.9 RE 1 – Audit records on write-once media</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree open"></button>
+      <a class="active" href="index.html"> FR 4 – Data confidentiality</a>
+      <ul>
+        <li><button class="tree blank"></button><a href="srinformat.html">SR 4.2 – Information persistence</a></li>
+        <li><button class="tree blank"></button><a href="srinformat.html">SR 4.2 – Information persistence</a></li>
+        <li><button class="tree blank"></button><a href="sruseofcry.html">SR 4.3 – Use of cryptography</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../5_fr5restricteddataflo/index.html"> FR 5 – Restricted data flow</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../5_fr5restricteddataflo/srnetworks.html">SR 5.1 – Network segmentation</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../6_fr6timelyresponsetoe/index.html"> FR 6 – Timely response to events</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../6_fr6timelyresponsetoe/srauditlog.html">SR 6.1 – Audit log accessibility</a></li>
+        <li><button class="tree blank"></button><a href="../6_fr6timelyresponsetoe/srcontinuo.html">SR 6.2 – Continuous monitoring</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../7_fr7resourceavailabil/index.html"> FR 7 – Resource availability / Control System Backup</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../7_fr7resourceavailabil/srcontrols.html">SR 7.3 – Control system backup</a></li>
+        <li><button class="tree blank"></button><a href="../7_fr7resourceavailabil/srnetworka.html">SR 7.6 – Network and security configuration settings</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="index.html"> FR 4 – Data confidentiality</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1> FR 4 – Data confidentiality</h1>
+<div class="paragraph">
+<p>Ensure the confidentiality of information on communication channels and in data repositories to prevent unauthorized disclosure.
+lorem</p>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="../3_fr3systemintegrity/srreauditr.html">SR 3.9 RE 1 – Audit records on write-once media</a></span>
+  <span class="next"><a href="srinformat.html">SR 4.2 – Information persistence</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

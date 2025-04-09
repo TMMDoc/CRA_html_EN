@@ -1,0 +1,117 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_current_realization_target_state_and_measures">Current realization, target state and measures</a>
+<ul class="sectlevel2">
+<li><a href="#_item">Item:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Praxis has a User role system). The authorization check is also used to filter the workflow tasks available to the current user when command panel is prepared for the selected item. The control system uniquely identify and authenticate all human users with password</p>
+</div>
+<div class="paragraph">
+<p>Site-Admin role has full access to manage all accounts. There are no Non-human user accounts</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Optionally: To switch from user level to administrative access, a daily changing 8-digit PIN is requested, which can be requested from the TRUMPF Service Center like on the machines</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Passwords and other credentials as a server-side component (e.g. in the database of an IDM) must be cryptographically secured, non-recoverable form.</p>
+</div>
+<div class="paragraph">
+<p>Passwords and other credentials as a client-side part of an API call, a database connection string or another connection setup must be stored in encrypted and integrity-secured form. The password for this secure storage must be secured in the associated application against easy reading.</p>
+</div>
+<div class="paragraph">
+<p>SR1.5 ensures the proper management of authenticators (such as passwords, cryptographic keys, and biometrics) to maintain system security.
+It includes password policies such as complexity, expiration, and storage security.</p>
+</div>
+<div class="paragraph">
+<p>Relevant Requirement Enhancements (REs) under SR 1.5:</p>
+</div>
+<div class="paragraph">
+<p>SR 1.5 RE 1 – Password-based authentication (enforcing strong password policies).</p>
+</div>
+<div class="paragraph">
+<p>SR 1.5 RE 2 – Multi-factor authentication (adding an extra layer of security beyond passwords).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MFA could be implemented as an option (email)</p>
+</li>
+<li>
+<p>Support of TPM functionality?</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_current_realization_target_state_and_measures">Current realization, target state and measures</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_item">Item:</h3>
+<div class="paragraph">
+<p><strong>FogbugZ case</strong> <a href="https://metamation.fogbugz.com/f/cases/41137/SR-1-5-RE-1-Password-based-authentication-enforcing-strong-password-policies" class="bare">https://metamation.fogbugz.com/f/cases/41137/SR-1-5-RE-1-Password-based-authentication-enforcing-strong-password-policies</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Current realization</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Target State</strong></p>
+</div>
+<div class="paragraph">
+<p>Maybe a good target state is to use the Trumpf PW standard:</p>
+</div>
+<div class="paragraph">
+<p>Regarding the password length, see the below screenshot which is taken from Trumpf policies "Security Standard - Use of passwords". It says if the user doesn&#8217;t have privileged rights then he can have a password with the length of 12 characters but our developers and testers have administrator rights which needs 20 characters of password length.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/PW.png" alt="PW"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Open Questions / Items</strong></p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>FogbugZ case</strong> <a href="https://metamation.fogbugz.com/f/cases/41138/SR-1-5-MFA-as-an-option-email" class="bare">https://metamation.fogbugz.com/f/cases/41138/SR-1-5-MFA-as-an-option-email</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Current realization</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Target State</strong></p>
+</div>
+<div class="paragraph">
+<p>A very simple mechanism where a random 6 digit number is sent to the email of the user</p>
+</div>
+<div class="paragraph">
+<p><strong>Open Questions / Items</strong></p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>FogbugZ case</strong> <a href="https://metamation.fogbugz.com/f/cases/41139/SR-1-5-Server-side-encryption-of-the-passwords" class="bare">https://metamation.fogbugz.com/f/cases/41139/SR-1-5-Server-side-encryption-of-the-passwords</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Current realization</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Target State</strong></p>
+</div>
+<div class="paragraph">
+<p>status?</p>
+</div>
+<div class="paragraph">
+<p><strong>Open Questions / Items</strong></p>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,4 @@
+TITLE=CRA developer document
+OUTDIR=../../CRA_EN
+LOGO=img/logo.png,123,50
+COPYRIGHT=Copyright &copy; 2025 by Metamation. All rights reserved.
